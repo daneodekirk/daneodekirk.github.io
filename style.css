@@ -1,11 +1,13 @@
 html,body {
-font-family: 'Rufina', serif;
+  font-family: 'Rufina', serif;
+  font-weight:normal;
   overflow-x:hidden;
   position:absolute;
   width:100%;
 }
 h1 {
   font-size: 270px;
+  font-weight:normal;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -16,12 +18,14 @@ h1 {
   padding:0;
 }
 h2 {
+  font-weight:normal;
   color:white;
   width:100%;
   font-size:150px;
   line-height:2em;
 }
 p {
+  font-weight:normal;
   font-size: 24px;
   line-height: 30px;
 }
@@ -32,6 +36,8 @@ div.row {
 
 div.showcase {
   position:relative;
+  max-width:95%;
+  margin:auto;
 }
 
 img {
@@ -59,7 +65,6 @@ img.jaffa {
 
 h2.uw {
   font-size: 200px;
-  margin-left: -145px;
   line-height: 220px;
   margin-top: 100px
 }
@@ -103,5 +108,4 @@ img.electric-violet {
 
 img.artwork {
   padding:20px 0px;
-
 }
