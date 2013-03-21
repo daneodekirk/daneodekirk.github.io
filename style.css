@@ -1,4 +1,5 @@
 html,body {
+  color: #333;
   font-family: 'Rufina', serif;
   font-weight:normal;
   overflow-x:hidden;
@@ -55,6 +56,11 @@ img.brush {
   max-width:none;
   position:absolute;
   z-index:-1;
+}
+
+img.egyptian-blue {
+  top: -410px;
+  left: -1400px;
 }
 
 img.jaffa {
