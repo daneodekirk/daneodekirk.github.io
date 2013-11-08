@@ -12387,10 +12387,10 @@ if ( typeof window === "object" && typeof window.document === "object" ) {
   
     model: SplashModel,
 
-    url: 'site.json',
+    url: 'portfolio.json',
 
-   initialize: function( options ) {
-      this.fetch();
+    initialize: function( options ) {
+       this.fetch();
     }
 
   })
@@ -12402,9 +12402,9 @@ if ( typeof window === "object" && typeof window.document === "object" ) {
     template: _.template( $('#info-template').html() ),
 
     events: {
-      'click a span' : 'info',
-      'click span.close' : 'close',
-      'click a.tools' : 'showtools',
+      'click a span'        : 'info',
+      'click span.close'    : 'close',
+      'click a.tools'       : 'toggleTools',
       'mouseover a.project' : 'changeColor'        
     },
 
@@ -12421,7 +12421,6 @@ if ( typeof window === "object" && typeof window.document === "object" ) {
 
     render: function(){
       var info = _.pluck( this.collection.toJSON(), this.$target.data().site )
-      this.hideTools();
       this.$info.html( this.template( _.first( info ) ) ).fadeIn()
     },
 
@@ -12442,20 +12441,18 @@ if ( typeof window === "object" && typeof window.document === "object" ) {
 
     close: function() {
       this.$info.fadeOut( _.bind( this.showSplash, this ) ) 
+      return false;
     },
 
     showSplash: function() {
       this.$bg.fadeIn() 
     },
 
-    showtools: function() {
+    toggleTools: function() {
       this.$tools.toggle() 
+      return false;
     },
 
-    hideTools: function() {
-      this.$tools.hide()            
-    }
-  
   })
 
   $(document).ready(function() {

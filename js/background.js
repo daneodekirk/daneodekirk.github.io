@@ -6,10 +6,10 @@ jQuery(function($) {
   
     model: SplashModel,
 
-    url: 'site.json',
+    url: 'portfolio.json',
 
-   initialize: function( options ) {
-      this.fetch();
+    initialize: function( options ) {
+       this.fetch();
     }
 
   })
@@ -21,9 +21,9 @@ jQuery(function($) {
     template: _.template( $('#info-template').html() ),
 
     events: {
-      'click a span' : 'info',
-      'click span.close' : 'close',
-      'click a.tools' : 'showtools',
+      'click a span'        : 'info',
+      'click span.close'    : 'close',
+      'click a.tools'       : 'toggleTools',
       'mouseover a.project' : 'changeColor'        
     },
 
@@ -40,7 +40,6 @@ jQuery(function($) {
 
     render: function(){
       var info = _.pluck( this.collection.toJSON(), this.$target.data().site )
-      this.hideTools();
       this.$info.html( this.template( _.first( info ) ) ).fadeIn()
     },
 
@@ -61,20 +60,18 @@ jQuery(function($) {
 
     close: function() {
       this.$info.fadeOut( _.bind( this.showSplash, this ) ) 
+      return false;
     },
 
     showSplash: function() {
       this.$bg.fadeIn() 
     },
 
-    showtools: function() {
+    toggleTools: function() {
       this.$tools.toggle() 
+      return false;
     },
 
-    hideTools: function() {
-      this.$tools.hide()            
-    }
-  
   })
 
   $(document).ready(function() {

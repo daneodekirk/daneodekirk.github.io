@@ -6,12 +6,12 @@
 @fontsize: 20px;
 @lineheight: 21px;
 
-.transition (@time: 700ms) {
-  transition: right @time;
-  -webkit-transition: right @time;
-  -moz-transition: right @time;
-  -ms-transition: right @time;
-  -o-transition: right @time;
+.transition (@attr: right, @time: 700ms) {
+  transition: @attr @time;
+  -webkit-transition: @attr @time;
+  -moz-transition: @attr @time;
+  -ms-transition: @attr @time;
+  -o-transition: @attr @time;
 }
 
 html,body {
