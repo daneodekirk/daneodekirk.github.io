@@ -3,7 +3,7 @@ html
  head
   link( rel='stylesheet', href='https://fonts.googleapis.com/css?family=Open+Sans', type='text/css', media='all' )
   link( rel='stylesheet', href='../site.css', type='text/css', media='all' )
-  script( type='text/javascript', src='../js/site.dev.js' )
+  script( type='text/javascript', src='../site.js' )
  body
   div.container
     div#contact
@@ -12,28 +12,28 @@ html
       a.project(data-color='purple', target="_blank", href='http://uw.edu' ) 
         span(data-site="uw") info 
         | uw.edu
-      a.project(data-color='green',  target="_blank", href='http://uw.edu/maps') 
+      a.project(data-color='maroon',  target="_blank", href='http://uw.edu/maps') 
         span(data-site="maps") info 
         | uw maps
       a.project(data-color='green',   target="_blank", href='http://uw.edu/150/timeline') 
         span(data-site="150") info 
         | uw 150th
-      a.project(data-color='green',   target="_blank", href='http://uw.edu/maps/state') 
+      a.project(data-color='blue',   target="_blank", href='http://uw.edu/maps/state') 
         span(data-site="state") info 
         | state map
-      a.project(data-color='blue',   target="_blank", href='http://uw.edu/maps/seattle') 
+      a.project(data-color='darkgreen',   target="_blank", href='http://uw.edu/maps/seattle') 
         span(data-site="seattle") info 
         | community map
       a.project(data-color='orange', target="_blank", href='http://uwtv.org') 
         span(data-site="uwtv") info 
         | uwtv
-      a.project(data-color='red',    target="_blank", href='http://uw.edu/news') 
+      a.project(data-color='navy',    target="_blank", href='http://uw.edu/news') 
         span(data-site="news") info 
         | uw today
-      a.project(data-color='red',    target="_blank", href='http://fortmadison.com') 
+      a.project(data-color='darkviolet',    target="_blank", href='http://fortmadison.com') 
         span(data-site="madison") info 
         | fort madison
-      a.project(data-color='red',    target="_blank", href='http://uw.edu/marketing/uw-web-team-sites') 
+      a.project(data-color='goldenrod',    target="_blank", href='http://uw.edu/marketing/uw-web-team-sites') 
         span(data-site="other") info 
         | other sites
       a.project.tools(href="#tools")
@@ -46,23 +46,4 @@ html
     div#info
   
   script#info-template(type='text/template')
-    | <h2><a href="<%= url %>"><%= title %></a></h2>
-    | <h3>about</h3>
-    | <p>
-    | <% _.each( desc, function(sen) { %>
-    |     <%= sen %> <br/>
-    | <% }) %>
-    | </p>
-    | <h3>points</h3>
-    | <p>
-    | <% _.each( points, function(point) { %>
-    |     <%= point %><br/>
-    | <% }) %>
-    | </p>
-    | <h3>thoughts</h3>
-    | <p>
-    | <% _.each( thoughts, function(thought) { %>
-    |     <%= thought %> <br/>
-    | <% }) %>
-    | </p>
-    | <span class="close">close</span>
+    <h2><a href="<%= url %>"><%= title %></a></h2> <h3>about</h3> <p> <% _.each( desc, function(sen) { %> <%= sen %> <br/> <% }) %> </p> <h3>points</h3> <p> <% _.each( points, function(point) { %> <%= point %><br/> <% }) %> </p> <h3>thoughts</h3> <p> <% _.each( thoughts, function(thought) { %> <%= thought %> <br/> <% }) %> </p> <span class="close">close</span>
