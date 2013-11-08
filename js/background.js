@@ -82,5 +82,4 @@ jQuery(function($) {
       , splash =  new Splash({ el: $('.container'), collection : splashcollection });
   })
 
-
 });

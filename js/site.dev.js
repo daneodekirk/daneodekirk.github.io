@@ -12463,5 +12463,4 @@ if ( typeof window === "object" && typeof window.document === "object" ) {
       , splash =  new Splash({ el: $('.container'), collection : splashcollection });
   })
 
-
 });

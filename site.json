@@ -136,8 +136,7 @@
       "majority of all our sites run using wordpress multisite"
     ],
     "thoughts":[
-      "i'd like to create a cdn for images that cuts, crops and caches on the fly.",
-      "start using varnish as an extra cache layer when we start seeing performance slow down"
+      "just got to keep the list growing."
     ]
   }
 
