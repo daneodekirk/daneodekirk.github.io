@@ -1,0 +1,70 @@
+doctype 5
+html
+ head
+  link( rel='stylesheet', href='https://fonts.googleapis.com/css?family=Open+Sans', type='text/css', media='all' )
+  link( rel='stylesheet', href='site.css', type='text/css', media='all' )
+  script( type='text/javascript', src='js/site.dev.js' )
+ body
+  div.container
+    div#contact
+      p dane odekirk
+      p.me portfolio 
+      a.project(data-color='purple', target="_blank", href='http://uw.edu' ) 
+        span(data-site="uw") info 
+        | uw.edu
+      a.project(data-color='green',  target="_blank", href='http://uw.edu/maps') 
+        span(data-site="maps") info 
+        | uw maps
+      a.project(data-color='green',   target="_blank", href='http://uw.edu/150/timeline') 
+        span(data-site="150") info 
+        | uw 150th
+      a.project(data-color='green',   target="_blank", href='http://uw.edu/maps/state') 
+        span(data-site="state") info 
+        | state map
+      a.project(data-color='blue',   target="_blank", href='http://uw.edu/maps/seattle') 
+        span(data-site="seattle") info 
+        | community map
+      a.project(data-color='orange', target="_blank", href='http://uwtv.org') 
+        span(data-site="uwtv") info 
+        | uwtv
+      a.project(data-color='red',    target="_blank", href='http://uw.edu/news') 
+        span(data-site="news") info 
+        | uw today
+      a.project(data-color='red',    target="_blank", href='http://fortmadison.com') 
+        span(data-site="madison") info 
+        | fort madison
+      a.project(data-color='red',    target="_blank", href='http://uw.edu/marketing/uw-web-team-sites') 
+        span(data-site="other") info 
+        | other sites
+      a.project.tools(href="#tools")
+        | tools
+      p#tools.
+        vim backbone.js jquery underscore nodejs grunt php wordpress python rails django varnish nginx apache 
+      
+      
+    div.background
+      div.splash
+
+    div#info
+  
+  script#info-template(type='text/template')
+    | <h2><a href="<%= url %>"><%= title %></a></h2>
+    | <h3>about</h3>
+    | <p>
+    | <% _.each( desc, function(sen) { %>
+    |     <%= sen %> <br/>
+    | <% }) %>
+    | </p>
+    | <h3>points</h3>
+    | <p>
+    | <% _.each( points, function(point) { %>
+    |     <%= point %><br/>
+    | <% }) %>
+    | </p>
+    | <h3>thoughts</h3>
+    | <p>
+    | <% _.each( thoughts, function(thought) { %>
+    |     <%= thought %> <br/>
+    | <% }) %>
+    | </p>
+    | <span class="close">close</span>

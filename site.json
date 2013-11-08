@@ -1,0 +1,144 @@
+{
+
+  "uw" : {
+    "url"   : "http://uw.edu",
+    "title" : "uw.edu", 
+    "desc"  : [ 
+        "the top slider was my first project years back.",
+        "the goal was to write it in jquery, minimize file size and maximize fluidity.",
+        "(and make it work in ie6)" 
+    ],
+    "points" : [ 
+        "written with jquery",
+        "tile images are created using the GD library",
+        "not responsive but does have a mobile counterpart"
+    ],
+    "thoughts" : [
+        "would like to make the page fully responsive"
+    ]
+  },
+
+  "maps" : {
+    "url"   : "http://uw.edu/maps",
+    "title" : "campus map", 
+    "desc"  : [
+        "full screen map helps user experience by removing clutter.",
+        "classes, departments, landmarks, directions and mobile friendly."
+    ],
+    "points":[
+        "responsive.",
+        "accolades from the official <a href=\"http://googlegeodevelopers.blogspot.com/2012/05/map-of-week-university-of-washington.html\">google maps blog</a>.",
+        "mentioned by matt at the <a href=\"http://ma.tt/2012/08/state-of-the-word-2012/\">2012 state of the word</a>." 
+    ],
+    "thoughts":[
+        "would like to code a better mobile and tablet experience"
+    ]
+  },
+
+  "150": {
+    "url"   : "http://uw.edu/150/timeline",
+    "title": "150th anniversary timeline",
+    "desc" : [
+      "allowed people to submit stories about their memories at the uw."
+    ],
+    "points":[
+        "various caching techniques used for rendering out the full timeline"
+    ],
+    "thoughts":[
+        "would have been better written with backbone.js"
+    ]
+  },
+
+  "state": {
+    "url"   : "http://uw.edu/maps/state",
+    "title": "washington state district map",
+    "desc" : [
+      "a map that shows state districts, state legislatures and how the uw is affiliated with each"
+    ],
+    "points":[
+      "gathered and normalized polygon data so browsers don't get overrun with javascript.",
+      "a lot of ajax implementation for the information about the districts."
+    ],
+    "thoughts":[
+        "still needs a better mobile experience"
+    ]
+  },
+
+  "seattle": {
+    "url"   : "http://uw.edu/maps/seattle",
+    "title": "seattle community map",
+    "desc" : [
+      "a map that shows seattle communities and how the uw is affiliated with each."
+    ],
+    "points":[
+      "same technique used to build the state map, just with less polygons." 
+    ],
+    "thoughts":[
+      "still needs a better mobile experience."
+    ]
+  },
+
+  "uwtv": {
+    "url"   : "http://uwtv.org",
+    "title": "uwtv.org",
+    "title": "uwtv.org",
+    "desc" : [
+      "a json powered site with basic url routes to create pages."
+    ],
+    "points":[
+        "not much is stored locally although json feeds are cached and parsed when dynamically creating pages for better seo.",
+        "the site is also fully responsive and mobile friendly, even the videos.", 
+        "a lot of video feeds, live tv and live webcasts are run through the site."
+    ],
+    "thoughts":[
+        "rewrite with backbone.js (already been done but isn't live yet)."
+    ]
+  },
+
+  "news": {
+    "url"   : "http://uw.edu/news",
+    "title": "uw today",
+    "desc" : [
+      "the uw news site. our most trafficked site."
+    ],
+    "points":[
+      "image expander in the articles was fun to write.",
+      "responsive.",
+      "and survived the front page of reddit a few times." 
+    ],
+    "thoughts":[
+        "we just refreshed the site, although I'd like a better image cdn."
+    ]
+  },
+
+  "madison": {
+    "url"   : "http://fortmadison.com",
+    "title": "fortmadison.com",
+    "desc" : [
+      "the site for the town of fort madison, iowa"
+    ],
+    "points":[
+      "just a basic wordpress site",
+      "i personally like the hover effect of the menus"
+    ],
+    "thoughts":[
+      "not i would change except making it mobile friendly"
+    ]
+  },
+
+  "other": {
+    "url"   : "http://uw.edu/marketing/uw-web-team-sites",
+    "title": "list of all the sites i'm responsible for",
+    "desc" : [
+      "these are all the sites that run on the system i design and managed at the uw"
+    ],
+    "points":[
+      "majority of all our sites run using wordpress multisite"
+    ],
+    "thoughts":[
+      "i'd like to create a cdn for images that cuts, crops and caches on the fly.",
+      "start using varnish as an extra cache layer when we start seeing performance slow down"
+    ]
+  }
+
+}
