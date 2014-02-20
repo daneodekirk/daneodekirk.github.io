@@ -1,4 +1,19 @@
-@import "bootstrap/bootstrap";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+// Reset
+@import "bootstrap/normalize";
+@import "bootstrap/print";
+
+// Core 
+@import "bootstrap/scaffolding";
+@import "bootstrap/type";
+@import "bootstrap/grid";
+
+// Utilit
+@import "bootstrap/utilities";
+
+
 @import "onepage-scroll";
 
 body {
@@ -13,14 +28,16 @@ p {
 }
 
 h1, h2 {
-  font-size: 140px;
+  font-size: 110px;
 }
 
 div.wrapper {
-  position: absolute;
+  position: relative;
   top: 50%;
-  width: 100%;
-  margin-top:-92px;
+  width: 1024px;
+  margin-top: -92px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 div.inner {

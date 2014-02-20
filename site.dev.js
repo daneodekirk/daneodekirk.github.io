@@ -12054,7 +12054,8 @@ if ( typeof window === "object" && typeof window.document === "object" ) {
     },
 
     before : function( index ) {
-//      this.$('section').eq(index-1).find('p').transit({ marginTop : 0 }, 700 )
+      var section = this.$('section').eq(index-1).find('.inner')
+      section.css({marginTop: -section.height()/4})
 //      this.$('section').eq(index-1).find('img').transit({ marginTop : 0 }, 1300 )
     },
 
