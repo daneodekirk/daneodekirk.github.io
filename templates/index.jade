@@ -1,49 +1,52 @@
 doctype 5
 html
  head
-  link( rel='stylesheet', href='https://fonts.googleapis.com/css?family=Open+Sans', type='text/css', media='all' )
-  link( rel='stylesheet', href='../site.css', type='text/css', media='all' )
-  script( type='text/javascript', src='../site.js' )
+  link( rel='stylesheet', href='http://fonts.googleapis.com/css?family=Raleway:400,300|Yanone+Kaffeesatz:300|Oswald:700', type='text/css', media='all' )
+  link( rel='stylesheet', href='site.css', type='text/css', media='all' )
+  script( type='text/javascript', src='site.dev.js' )
  body
-  div.container
-    div#contact
-      p dane odekirk
-      p.me portfolio 
-      a.project(data-color='purple', target="_blank", href='http://uw.edu' ) 
-        span(data-site="uw") info 
-        | uw.edu
-      a.project(data-color='maroon',  target="_blank", href='http://uw.edu/maps') 
-        span(data-site="maps") info 
-        | uw maps
-      a.project(data-color='green',   target="_blank", href='http://uw.edu/150/timeline') 
-        span(data-site="150") info 
-        | uw 150th
-      a.project(data-color='blue',   target="_blank", href='http://uw.edu/maps/state') 
-        span(data-site="state") info 
-        | state map
-      a.project(data-color='darkgreen',   target="_blank", href='http://uw.edu/maps/seattle') 
-        span(data-site="seattle") info 
-        | community map
-      a.project(data-color='orange', target="_blank", href='http://uwtv.org') 
-        span(data-site="uwtv") info 
-        | uwtv
-      a.project(data-color='navy',    target="_blank", href='http://uw.edu/news') 
-        span(data-site="news") info 
-        | uw today
-      a.project(data-color='darkviolet',    target="_blank", href='http://fortmadison.com') 
-        span(data-site="madison") info 
-        | fort madison
-      a.project(data-color='goldenrod',    target="_blank", href='http://uw.edu/marketing/uw-web-team-sites') 
-        span(data-site="other") info 
-        | other sites
-      a.project.tools(href="#tools")
-        | tools
-      p#tools vim git backbone.js jquery underscore nodejs grunt php wordpress varnish python plone svn rails django nginx apache
-      
-    div.background
-      div.splash
+  div.main
+    section.one
+      div.container 
+        div.wrapper
+          img.gravatar(src='https://lh5.googleusercontent.com/D7SwXOevcuVmm-f8XZyOeJUV9xgjt3_Sepn7kKHfDBLT=w150-h180-c')
+          h1 i'm dane
+    section.two
+      div.container 
+        div.wrapper 
+          h2 wordpress developer 
+          img.gravatar(src='https://lh5.googleusercontent.com/D7SwXOevcuVmm-f8XZyOeJUV9xgjt3_Sepn7kKHfDBLT=w150-h180-c')
+          div.inner 
+            p
+              a(href="http://github.com/daneodekirk", target="_blank") github 
+              a(href="http://uw.edu", target="_blank") uw.edu 
+              a(href="http://uw.edu/maps", target="_blank") campus maps 
+              a(href="http://uw.edu/150", target="_blank") uw 150th 
+              a(href="http://fortmadison.com", target="_blank") fort madison 
+              a(href="http://uw.edu/marketing/uw-web-team-sites/", target="_blank") everything else 
+            p vim git backbone.js jquery underscore nodejs grunt php wordpress varnish python plone svn rails django nginx apache coffeescript jade less sass
 
-    div#info
-  
-  script#info-template(type='text/template')
-    <h2><a href="<%= url %>"><%= title %></a></h2> <h3>about</h3> <p> <% _.each( desc, function(sen) { %> <%= sen %> <br/> <% }) %> </p> <h3>points</h3> <p> <% _.each( points, function(point) { %> <%= point %><br/> <% }) %> </p> <h3>thoughts</h3> <p> <% _.each( thoughts, function(thought) { %> <%= thought %> <br/> <% }) %> </p> <span class="close">close</span>
+    section.three
+      div.container 
+        div.wrapper 
+          img.gravatar(src='https://lh5.googleusercontent.com/D7SwXOevcuVmm-f8XZyOeJUV9xgjt3_Sepn7kKHfDBLT=w150-h180-c')
+          div.inner
+            h2 science guy
+            a(href="https://github.com/daneodekirk/bohm",target="_blank") de broglie-bohm theory anyone?
+
+    section.four
+      div.container 
+        div.wrapper 
+          img.gravatar(src='https://lh5.googleusercontent.com/D7SwXOevcuVmm-f8XZyOeJUV9xgjt3_Sepn7kKHfDBLT=w150-h180-c')
+          a(href="/canvas",target="_blank")
+            h2 occasional artist
+
+    section.five
+      div.container 
+        div.wrapper 
+          img.gravatar(src='https://lh5.googleusercontent.com/D7SwXOevcuVmm-f8XZyOeJUV9xgjt3_Sepn7kKHfDBLT=w150-h180-c')
+          div.inner
+            h2 get in touch
+            p
+              | daneodekirk at gmail dot com or the 
+              a(href="http://uw.edu/home/peopledir/",target="_blank") uw directory

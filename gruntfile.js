@@ -10,7 +10,8 @@ module.exports = function(grunt) {
           }
         },
         files: {
-          "portfolio/index.html": ["templates/*.jade"]
+          "index.html": ["templates/index.jade"]
+          //"portfolio/index.html": ["templates/portfolio.jade"]
         }
       }
     },
@@ -21,15 +22,18 @@ module.exports = function(grunt) {
       dist: {
         libraries: [
           'js/jquery.js',
+          'js/jquery.easing.1.3.js',
           'js/underscore.js',
           'js/backbone.js',
-          'js/jquery.transit.js'
+          'js/jquery.transit.js',
+          'js/jquery.onepage-scroll.js',
+          'js/jgravity.js',
         ],
         custom: [
-          'js/background.js'
+          'js/slides.js'
         ],
         src: [ '<%= concat.dist.libraries %>', '<%= concat.dist.custom %>' ],
-        dest: 'js/site.dev.js'
+        dest: 'site.dev.js'
       }
     },
     less: {
@@ -70,8 +74,18 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      files: ['<%= concat.dist.src %>', 'templates/*.jade', 'less/*.less' ],
-      tasks: ['default']
+      js: {
+        files: ['<%= concat.dist.src %>'],
+        tasks: ['js']
+      },
+      css: {
+        files: ['less/*.less','less/*/*.less'],
+        tasks: ['less']
+      },
+      jade: {
+        files: ['templates/*.jade' ],
+        tasks: ['jadetask']
+      }
     },
     notify: {
       watch: {
@@ -93,6 +107,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-notify');
   
 
-  grunt.registerTask('default', ['jade', 'concat', 'less', 'uglify', 'notify']);
+  grunt.registerTask( 'default', ['jade', 'concat', 'less', 'uglify', 'notify']);
+  grunt.registerTask( 'css', ['less', 'notify']);
+  grunt.registerTask( 'js', [ 'concat', 'uglify', 'notify']);
+  grunt.registerTask( 'jadetask', [ 'jade', 'notify']);
 
 };
