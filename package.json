@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "daneodekirk.com",
   "version": "0.1.0",
   "devDependencies": {
@@ -10,5 +11,21 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-notify": "~0.2.13",
     "grunt-contrib-less": "~0.8.1"
+=======
+  "name": "skeleton",
+  "description": "basic skeleton for front end development",
+  "repository": "github.com/daneodekirk/skeleton",
+  "version": "1.0.0",
+  "devDependencies": {
+    "clean-css": "*",
+    "grunt": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-jade": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-notify": "*"
+>>>>>>> Initial commit.
   }
 }
