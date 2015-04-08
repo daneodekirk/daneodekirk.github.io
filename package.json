@@ -1,11 +1,12 @@
 {
   "name": "daneodekirk",
-  "description":"daneodekirk.com",
+  "description": "daneodekirk.com",
   "repository": "github.com/daneodekirk/daneodekirk.github.com",
   "version": "1.0.0",
   "devDependencies": {
     "clean-css": "*",
     "grunt": "*",
+    "grunt-contrib-coffee": "^0.13.0",
     "grunt-contrib-concat": "*",
     "grunt-contrib-jade": "*",
     "grunt-contrib-jshint": "*",

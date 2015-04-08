@@ -1,25 +1,24 @@
 doctype html
 html(lang='en')
   head
-    meta(charset='utf-8')
-    title dane odekirk \\ front end developer
-    meta(name='description', content='based in seattle. experienced. knowledgable.')
-    meta(name='author', content='dane odekirk')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel='stylesheet', href='app.css')
-    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Open+Sans%3A400italic%2C700italic%2C400%2C700')
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
-    script(src='app.js')
+    title dane odekirk // front end developer
+    meta(name='description' content='based in seattle. experienced. knowledgable.')
+    meta(name='author' content='dane odekirk')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='icon'  type='image/png' sizes="32x32" href='favicon.png')
+    style
+        include ../app.css
   body
-    h1 dane odekirk
-    div.section
-      .container
-        .row
-          .twelve.columns( style='margin-top: 25%' )
-            img.three.columns.u-full-width(src='https://lh3.googleusercontent.com/-MXwPCYWmVv0/AAAAAAAAAAI/AAAAAAAA2EA/DDuwLBqjjVg/s180-c/')
-            a.two.columns(href='https://www.linkedin.com/in/daneodekirk') linkedin
-            a.two.columns(href='https://github.com/daneodekirk') github
-            a.two.columns(href='https://medium.com/@dane') medium
-            a.two.columns(href='#') me
-            //- p.two.columns Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus distinctio itaque sit, expedita ea dolore eveniet libero deserunt dignissimos explicabo atque amet fugit labore fugiat hic id aspernatur, consectetur. Vero.
-
+    div.container
+        h1 dane odekirk
+        span
+        div
+            a(href='https://www.linkedin.com/in/daneodekirk') linkedin
+        div
+            a(href='https://github.com/daneodekirk') github
+        div
+            a(href='https://medium.com/@dane') medium
+        div
+            a#contact(href='#') me
+    script
+        include ../app.js

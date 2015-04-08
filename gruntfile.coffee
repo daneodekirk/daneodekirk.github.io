@@ -24,10 +24,9 @@ module.exports = (grunt) ->
 
     uglify:
       options:
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today() %> */\n'
+        compress: true
         sourceMap: true
         sourceMapIncludeSources: true
-        # sourceMapIn: 'js/boundless.js.map'
 
       dist:
         files:
@@ -69,7 +68,7 @@ module.exports = (grunt) ->
         files: [ 'less/*.less' ]
         tasks: ['default' ]
       jade :
-        files: [ 'jade/*.jade', 'jade/*/*.jade' ]
+        files: [ 'jade/*.jade' ]
         tasks: ['default' ]
 
 
