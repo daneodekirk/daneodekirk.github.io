@@ -1,7 +1,7 @@
 ---
 title: my hiatus from one life and my break from another
 slug: my-hiatus-from-one-life-and-my-break-from-another
-date: '2021-12-12'
+date: '2024-04-03'
 ---
 
 I'm sitting in this closed, interior office.
