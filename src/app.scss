@@ -3,8 +3,24 @@
   $theme-color: "cyan",
 );
 
+@import "@fontsource/figtree";
+
+html, body, h1, main, header {
+  font-family: "Figtree", var(--pico-font-family)
+}
+
 .container {
   max-width: 900px;
   padding: 2rem;
+}
+
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  a {
+    text-decoration: none;
+  }
 }
 
