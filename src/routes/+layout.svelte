@@ -1,6 +1,6 @@
 <script>
   import { navigating } from '$app/stores';
-  import '@picocss/pico';
+  import '../app.scss';
 </script>
 
 <header class="container">

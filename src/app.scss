@@ -1,0 +1,10 @@
+@use "@picocss/pico/scss/pico" with (
+  $semantic-root-element: "div#pico",
+  $theme-color: "cyan",
+);
+
+.container {
+  max-width: 900px;
+  padding: 2rem;
+}
+
