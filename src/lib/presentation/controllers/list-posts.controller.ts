@@ -1,14 +1,15 @@
-import type ListPostsUseCase from '$lib/application/use-cases/list-posts.use-case';
+import { error } from '@sveltejs/kit';
+import ListPostsUseCase from '$lib/application/use-cases/list-posts.use-case';
+import RepositoryManager from '$lib/infrastructure/repository.manager';
 
 class ListPostsController {
-  private readonly listPostsUseCase: ListPostsUseCase;
 
-  constructor(listPostUseCase: ListPostsUseCase) {
-    this.listPostsUseCase = listPostUseCase;
-  }
+  list() {
+    const repository = new RepositoryManager()
+    const useCase = new ListPostsUseCase(repository)
 
-  execute() {
-    const posts = this.listPostsUseCase.do();
+    const posts = useCase.do()
+    if (!posts) throw error(404);
     return posts;
   }
 }

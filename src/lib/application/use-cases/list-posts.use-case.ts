@@ -1,14 +1,17 @@
 import type { PostMetadata } from '$lib/domain/post.entity';
-import type GenericRepository from '$lib/gateways/generic.repository';
-import GenericUseCase from './generic.use-case';
+import GenericUseCase from '$lib/application/generic.use-case';
+import type { IRepositoryManager } from '../repository-manager.interface';
 
 class ListPostsUseCase extends GenericUseCase<PostMetadata[]> {
-  constructor(repo: GenericRepository<PostMetadata[]>) {
-    super(repo);
+
+  constructor(repositoryManager: IRepositoryManager) {
+    super(repositoryManager);
   }
 
-  do(): Promise<PostMetadata[]> {
-    return this.repo.get() as Promise<PostMetadata[]>;
+  do() {
+    const listRepository = this.repositoryManager.getPostRepository();
+    return listRepository.list()
+
   }
 }
 

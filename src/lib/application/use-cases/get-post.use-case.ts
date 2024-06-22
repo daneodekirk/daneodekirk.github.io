@@ -1,14 +1,15 @@
+import GenericUseCase from '$lib/application/generic.use-case';
 import type { Post } from '$lib/domain/post.entity';
-import type GenericRepository from '$lib/gateways/generic.repository';
-import GenericUseCase from './generic.use-case';
+import type { IRepositoryManager } from '../repository-manager.interface';
 
 class GetPostUseCase extends GenericUseCase<Post> {
-  constructor(repo: GenericRepository<Post>) {
-    super(repo);
+  constructor(repositoryManager: IRepositoryManager) {
+    super(repositoryManager);
   }
 
-  do(id: string): Promise<Post> {
-    return this.repo.get(id) as Promise<Post>;
+  do(id: string) {
+    const postRepository = this.repositoryManager.getPostRepository();
+    return postRepository.get(id)
   }
 }
 

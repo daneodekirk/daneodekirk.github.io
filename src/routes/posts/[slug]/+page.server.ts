@@ -1,8 +1,15 @@
-import PostWebPresenter from '$lib/presentation/presenters/post.web-presenter';
+import PostController from '$lib/presentation/controllers/post.controller.js';
+import { render } from 'svelte/server';
 import type { RouteParams } from './$types.js';
 import { type LoadEvent } from '@sveltejs/kit';
 
-export const load = ({ params }: LoadEvent<RouteParams>) => {
-  const view = new PostWebPresenter().view(params.slug);
-  return view;
+export const load = async ({ params }: LoadEvent<RouteParams>) => {
+  const post = await new PostController().get(params.slug);
+
+  const { title, date } = post.metadata;
+  const content = render(post.default, { props: {} }).body;
+
+  return {
+    title, content, date
+  };
 };

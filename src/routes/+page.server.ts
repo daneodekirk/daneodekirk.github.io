@@ -1,6 +1,6 @@
-import ListPostsWebPresenter from '$lib/presentation/presenters/list-posts.web-presenter.js';
+import ListPostsController from "$lib/presentation/controllers/list-posts.controller";
 
-export function load() {
-  const view = new ListPostsWebPresenter().view();
-  return view;
+export const load = async () => {
+  const posts = await new ListPostsController().list();
+  return { posts };
 }
