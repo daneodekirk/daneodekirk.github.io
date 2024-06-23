@@ -5,15 +5,27 @@
 
 @import "@fontsource/figtree";
 
-html, body, h1, main, header {
-  font-family: "Figtree", var(--pico-font-family)
+html,
+body,
+h1,
+main,
+header {
+  font-family: 'Figtree', var(--pico-font-family);
+}
+
+a.home {
+  text-decoration: none;
+  color: black;
 }
 
 .container {
   max-width: 900px;
   padding: 2rem;
-}
 
+  &.homepage {
+    margin-top: 10rem;
+  }
+}
 
 .item {
   display: flex;
@@ -23,4 +35,3 @@ html, body, h1, main, header {
     text-decoration: none;
   }
 }
-

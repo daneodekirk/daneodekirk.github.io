@@ -1,21 +1,24 @@
+<svelte:options runes={true} />
+
 <script>
-  import { navigating } from '$app/stores';
+  import { page } from '$app/stores';
   import '../app.scss';
+
+  let { children } = $props();
+
+  let homepage = $state(true);
+  $effect(() => (homepage = $page.url.pathname === '/'));
 </script>
 
-<header class="container">
-  <h1>hi //</h1>
+<header class="container" class:homepage>
+  <h1><a class="home" href="/">hi //</a></h1>
   <section>
     <a href="https://github.com/daneodekirk"> github </a>
     /
     <a href="http://www.linkedin.com/in/daneodekirk"> linkedin </a>
-
-    {#if $navigating && $navigating.to}
-      navigating to {$navigating.to.url.pathname}
-    {/if}
   </section>
 </header>
 
 <main class="container">
-  <slot />
+  {@render children()}
 </main>
