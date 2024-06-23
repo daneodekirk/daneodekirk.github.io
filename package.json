@@ -1,6 +1,8 @@
 {
-  "name": "home",
-  "version": "0.0.1",
+  "name": "daneodekirk",
+  "description": "daneodekirk.com",
+  "repository": "github.com/daneodekirk/daneodekirk.github.com",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "vite dev",
@@ -17,6 +19,7 @@
   "devDependencies": {
     "@playwright/test": "^1.28.1",
     "@sveltejs/adapter-auto": "^3.0.0",
+    "@sveltejs/adapter-static": "^3.0.2",
     "@sveltejs/kit": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^3.0.0",
     "@types/eslint": "^8.56.7",

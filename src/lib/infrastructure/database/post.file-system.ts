@@ -3,12 +3,12 @@ import type { PostRepository } from '$lib/domain/post.repository.interface';
 
 export class PostFromFileSystem implements PostRepository {
   get(id: string) {
-    const post = import(`#root/markdown/${id}.md`);
+    const post = import(`$md/${id}.md`);
     return post;
   }
 
   list() {
-    const files = import.meta.glob(`#root/markdown/*.md`);
+    const files = import.meta.glob(`$md/*.md`);
     const fileList = Object.entries(files).map(async ([_, resolver]) => {
       const { metadata } = (await resolver()) as Post;
       return metadata;

@@ -9,7 +9,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': './src',
-      '#root': '.',
+      '$md': __dirname + '/markdown',
     },
   },
 });
