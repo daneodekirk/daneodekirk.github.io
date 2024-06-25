@@ -10,10 +10,10 @@ export const load = async ({ params }: LoadEvent<RouteParams>) => {
 
   if (!post) throw error(404);
 
-  const { title, date } = post.metadata;
+  const { title, subtitle, date } = post.metadata;
   const content = render(post.default, { props: {} }).body;
 
   return {
-    title, content, date
+    title, subtitle, content, date
   };
 };

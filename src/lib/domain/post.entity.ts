@@ -4,6 +4,7 @@ export type PostMetadata = {
   title: string;
   slug: string;
   date: string;
+  subtitle?: string;
 };
 
 export type Post = {
