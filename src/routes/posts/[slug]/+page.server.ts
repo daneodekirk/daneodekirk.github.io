@@ -3,6 +3,8 @@ import { render } from 'svelte/server';
 import type { RouteParams } from './$types.js';
 import { type LoadEvent } from '@sveltejs/kit';
 
+type RouteParams = { slug: string }
+
 export const load = async ({ params }: LoadEvent<RouteParams>) => {
   const post = await new PostController().get(params.slug);
 
