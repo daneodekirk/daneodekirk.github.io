@@ -8,7 +8,7 @@
   <div class="item">
     <a href="/posts/{slug}">{title}</a>
     <small>
-      {format(date, 'MMM d')}
+      {format(date, 'MMM d, yyy')}
     </small>
   </div>
 {/each}
