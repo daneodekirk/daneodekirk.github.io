@@ -1,17 +1,22 @@
 import GenericUseCase from '$lib/application/generic.use-case';
+import { compareDesc } from 'date-fns';
 import type { PostMetadata } from '$lib/domain/post.entity';
 import type { IRepositoryManager } from '$lib/application/repository-manager.interface';
 
-class ListPostsUseCase extends GenericUseCase<PostMetadata[]> {
+class ListPostsByDateUseCase extends GenericUseCase<PostMetadata[]> {
 
   constructor(repositoryManager: IRepositoryManager) {
     super(repositoryManager);
   }
 
-  do() {
+  async do() {
     const listRepository = this.repositoryManager.getPostRepository();
-    return listRepository.list()
+    const posts = await listRepository.list()
+
+    const sortedPosts = posts.sort((current, next) => compareDesc(current.date, next.date))
+    return sortedPosts;
   }
+
 }
 
-export default ListPostsUseCase;
+export default ListPostsByDateUseCase;
