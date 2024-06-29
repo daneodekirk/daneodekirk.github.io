@@ -1,6 +1,7 @@
 <script>
-  export let data;
   import { format } from 'date-fns';
+
+  const { data } = $props();
 </script>
 
 <hgroup>

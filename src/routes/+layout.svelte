@@ -1,15 +1,14 @@
-<svelte:options runes={true} />
-
 <script>
   import { page } from '$app/stores';
   import '../app.scss';
+  import ThemeSwitcher from '../lib/components/ThemeSwitcher.svelte';
 
   let { children } = $props();
 
   let homepage = $state(true);
-  $effect(() => (homepage = $page.url.pathname === '/'));
-</script>
+  $effect(() => { homepage = $page.url.pathname === '/' });
 
+</script>
 <header class="container" class:homepage>
   <h1><a class="home" href="/">hi //</a></h1>
   <section>
@@ -20,5 +19,7 @@
 </header>
 
 <main class="container">
-  {@render children()}
+ {@render children()}
 </main>
+
+<ThemeSwitcher />

@@ -1,6 +1,26 @@
+@use "@picocss/pico/scss/colors" as *;
+
 @use "@picocss/pico/scss/pico" with (
   $semantic-root-element: "div#pico",
   $theme-color: "cyan",
+  $modules: (
+    "content/code": false,
+    "forms/input-color": false,
+    "forms/input-date": false,
+    "forms/input-file": false,
+    "forms/input-range": false,
+    "forms/input-search": false,
+    "components/accordion": false,
+    "components/card": false,
+    "components/dropdown": false,
+    "components/loading": false,
+    "components/modal": false,
+    "components/nav": false,
+    "components/progress": false,
+    "components/tooltip": false,
+    "utilities/accessibility": false,
+    "utilities/reduce-motion": false
+  )
 );
 
 @import "@fontsource/figtree";
@@ -18,7 +38,7 @@ header {
 
 a.home {
   text-decoration: none;
-  color: black;
+  color: $slate-800;
 }
 
 .container {
@@ -37,10 +57,15 @@ a.home {
   margin-bottom: 0.5rem;
   a {
     text-decoration: none;
-    color: black;
+    color: $slate-800;
   }
   small {
     padding-left: 1rem;
     text-wrap: nowrap;
   }
+}
+
+:root[data-theme="dark"] {
+  a.home { color: $slate-50; }
+  .item a { color: $slate-50; }
 }
