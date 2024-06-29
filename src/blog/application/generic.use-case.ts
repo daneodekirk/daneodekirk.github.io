@@ -1,4 +1,4 @@
-import type { IRepositoryManager } from "./repository-manager.interface";
+import type { IRepositoryManager } from "$blog/application/repository-manager.interface";
 
 abstract class GenericUseCase<T> {
   protected repositoryManager: IRepositoryManager;

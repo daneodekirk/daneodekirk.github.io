@@ -1,7 +1,6 @@
-import PostController from '$lib/presentation/controllers/post.controller.js';
+import PostController from '$blog/presentation/controllers/post.controller.js';
 import { render } from 'svelte/server';
-import type { RouteParams } from './$types.js';
-import { type LoadEvent } from '@sveltejs/kit';
+import { error, type LoadEvent } from '@sveltejs/kit';
 
 type RouteParams = { slug: string }
 

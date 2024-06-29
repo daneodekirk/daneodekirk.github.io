@@ -1,5 +1,5 @@
-import type { Post } from '$lib/domain/post.entity';
-import type { PostRepository } from '$lib/domain/post.repository.interface';
+import type { Post } from '$blog/domain/post.entity';
+import type { PostRepository } from '$blog/domain/post.repository.interface';
 
 export class PostFromFileSystem implements PostRepository {
   get(id: string) {

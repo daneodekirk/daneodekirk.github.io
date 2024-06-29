@@ -1,4 +1,5 @@
-import ListPostsController from "$lib/presentation/controllers/list-posts.controller";
+import ListPostsController from "$blog/presentation/controllers/list-posts.controller";
+import { error } from "@sveltejs/kit";
 
 export const load = async () => {
   const posts = await new ListPostsController().list();

@@ -1,6 +1,6 @@
-import GenericUseCase from '$lib/application/generic.use-case';
-import type { PostMetadata } from '$lib/domain/post.entity';
-import type { IRepositoryManager } from '$lib/application/repository-manager.interface';
+import GenericUseCase from '$blog/application/generic.use-case';
+import type { PostMetadata } from '$blog/domain/post.entity';
+import type { IRepositoryManager } from '$blog/application/repository-manager.interface';
 
 class ListPostsUseCase extends GenericUseCase<PostMetadata[]> {
 

@@ -1,5 +1,5 @@
-import ListPostsByDateUseCase from '$lib/application/use-cases/list-posts-by-date.use-case';
-import RepositoryManager from '$lib/infrastructure/repository.manager';
+import ListPostsByDateUseCase from '$blog/application/use-cases/list-posts-by-date.use-case';
+import RepositoryManager from '$blog/infrastructure/repository.manager';
 
 class ListPostsController {
 

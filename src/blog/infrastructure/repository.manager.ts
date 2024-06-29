@@ -1,5 +1,5 @@
-import type { IRepositoryManager } from "$lib/application/repository-manager.interface";
-import type { PostRepository } from "$lib/domain/post.repository.interface";
+import type { IRepositoryManager } from "$blog/application/repository-manager.interface";
+import type { PostRepository } from "$blog/domain/post.repository.interface";
 import { PostFromFileSystem } from "./database/post.file-system";
 
 class RepositoryManager implements IRepositoryManager {

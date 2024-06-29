@@ -1,7 +1,7 @@
-import GenericUseCase from '$lib/application/generic.use-case';
+import GenericUseCase from '$blog/application/generic.use-case';
 import { compareDesc } from 'date-fns';
-import type { PostMetadata } from '$lib/domain/post.entity';
-import type { IRepositoryManager } from '$lib/application/repository-manager.interface';
+import type { PostMetadata } from '$blog/domain/post.entity';
+import type { IRepositoryManager } from '$blog/application/repository-manager.interface';
 
 class ListPostsByDateUseCase extends GenericUseCase<PostMetadata[]> {
 

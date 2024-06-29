@@ -1,5 +1,5 @@
-import GetPostUseCase from '$lib/application/use-cases/get-post.use-case';
-import RepositoryManager from '$lib/infrastructure/repository.manager';
+import GetPostUseCase from '$blog/application/use-cases/get-post.use-case';
+import RepositoryManager from '$blog/infrastructure/repository.manager';
 
 class PostController {
 

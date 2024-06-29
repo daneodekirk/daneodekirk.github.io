@@ -10,6 +10,7 @@ export default defineConfig({
     alias: {
       '@': './src',
       '$md': __dirname + '/markdown',
+      '$blog': __dirname + '/src/blog',
     },
   },
 });
