@@ -1,3 +1,7 @@
+<svelte:head>
+  <title>{$page.data.title || 'dane odekirk'}</title>
+</svelte:head>
+
 <script>
   import { page } from '$app/stores';
   import '../app.scss';
@@ -7,8 +11,8 @@
 
   let homepage = $state(true);
   $effect(() => { homepage = $page.url.pathname === '/' });
-
 </script>
+
 <header class="container" class:homepage>
   <h1><a class="home" href="/">hi //</a></h1>
   <section>
