@@ -1,5 +1,12 @@
 <svelte:head>
   <title>{$page.data.title || 'dane odekirk'}</title>
+
+  <script>
+    window.goatcounter = { no_onload : true }
+  </script>
+
+  <script data-goatcounter="https://trip.daneodekirk.com/count"
+      src="//trip.daneodekirk.com/count.js"></script>
 </svelte:head>
 
 <script>

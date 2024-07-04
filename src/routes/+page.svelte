@@ -2,6 +2,8 @@
   const { data } = $props();
 
   import { format} from 'date-fns';
+
+  $effect(window.goatcounter.count)
 </script>
 
 {#each data.posts as { title, slug, date }}
