@@ -11,6 +11,7 @@
 
 <script>
   import { page } from '$app/stores';
+  import { afterNavigate } from '$app/navigation';
   import '../app.scss';
   import ThemeSwitcher from '../lib/components/ThemeSwitcher.svelte';
 
@@ -18,6 +19,8 @@
 
   let homepage = $state(true);
   $effect(() => { homepage = $page.url.pathname === '/' });
+
+  afterNavigate( () => { window.goatcounter.count() })
 </script>
 
 <header class="container" class:homepage>

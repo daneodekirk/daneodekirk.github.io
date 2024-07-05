@@ -2,8 +2,6 @@
   import { format } from 'date-fns';
 
   const { data } = $props();
-
-  $effect(window.goatcounter.count)
 </script>
 
 <hgroup>
